@@ -1,12 +1,24 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const url = "https://makas-academie.vercel.app/";
+
   return [
     {
-      url: "http://localhost:3000/",
+      url: `${url}/`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
+    },
+    {
+      url: `${url}/formations`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${url}/a-propos`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${url}/contact`,
+      lastModified: new Date(),
     },
   ];
 }
